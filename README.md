@@ -73,10 +73,40 @@ After any edit, rebuild and check the log for `Overfull \hbox`: that warning
 means a line is bleeding past the right margin, which looks broken in print
 even though the PDF still compiles.
 
-## ATS notes
+## ATS checks
 
-- `\pdfgentounicode=1` is set, so the PDF carries a correct Unicode text layer
-  and copy-paste extraction works. Verify with `pdftotext -layout resume-sde.pdf -`.
-- Single-column, no tables for content, no text inside images.
-- Keywords are repeated in both the skills list and the project bullets, since
-  some parsers weight the two sections differently.
+```bash
+make ats
+```
+
+Runs `tools/ats_check.py`, which parses the built PDFs exactly as an applicant
+tracking system would (text layer only) and reports what it can and cannot
+find. Run it after editing the header or section headings.
+
+There is no universal "ATS score". Real scores come from matching a CV against
+one specific job description, so this checks the mechanical things that are
+objectively right or wrong:
+
+- contact fields recovered from the text layer (email, phone, LinkedIn, GitHub)
+- junk characters introduced by icon fonts
+- standard section headings the parser recognises
+- date formats
+- word count and bullet structure
+
+Current state: all four contact fields extract cleanly. Both PDFs are single
+column, carry no images, embed every font, and set `\pdfgentounicode=1` so the
+text layer copies correctly.
+
+### Known limitation
+
+The FontAwesome icons in the header have no Unicode mapping, so they extract as
+three stray characters next to the contact details. They are separated by
+spaces and every field still parses, so the risk is low. To remove them
+entirely, delete the `\faPhone*`, `\faEnvelope`, `\faLinkedin` and `\faGithub`
+commands from `sections/header.tex`.
+
+### Link text must be the URL
+
+Parsers read the text layer, not the PDF's link annotations. So the visible
+text has to be the address itself (`github.com/uttkarsh-thakur26`), not a label
+like `github/uttkarsh-thakur26`. Keep it that way when editing.
