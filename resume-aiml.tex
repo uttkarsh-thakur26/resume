@@ -34,25 +34,25 @@
     \resumeProjectHeading
       {\textbf{CodeNav AI} $|$ \textit{FastAPI, React.js, LangChain, FAISS, Sentence-Transformers, OpenAI API, GitPython}}{2026}
       \resumeItemListStart
-        \resumeItem{Architected a full-stack \textbf{RAG} pipeline using \textbf{LangChain} and \textbf{FAISS vector database}, enabling natural language Q\&A over local codebases via \textbf{semantic search} with \texttt{all-MiniLM-L6-v2} embeddings.}
-        \resumeItem{Engineered \textbf{AST-based parsing} to extract logical code units (functions/classes), preserving semantic boundaries to deliver more relevant retrieval context than naive fixed-size text chunking.}
-        \resumeItem{Optimized vector index loading via \textbf{persistent disk-based caching}, cutting load times from \textbf{$>$20s to $<$100ms} --- a \textbf{99.5\% reduction} in latency.}
-        \resumeItem{Delivered a \textbf{React.js} front-end backed by a \textbf{FastAPI} REST API for natural language codebase navigation.}
+        \resumeItem{Built an \textbf{AI-powered search tool} that lets a developer ask questions about an unfamiliar codebase in plain English and get back the relevant code, using \textbf{large language models} and \textbf{semantic search} (\textbf{RAG}).}
+        \resumeItem{Improved answer quality by splitting code along real function and class boundaries instead of fixed-size blocks, so results come back complete and in context.}
+        \resumeItem{Cut the time to open a codebase from \textbf{over 20 seconds to under 0.1 seconds}, a \textbf{99.5\% improvement}, by saving the search index to disk instead of rebuilding it each time.}
+        \resumeItem{Delivered the tool as a web application with a \textbf{React.js} interface and a \textbf{FastAPI} backend.}
       \resumeItemListEnd
 
     \resumeProjectHeading
       {\textbf{BillSync} $|$ \textit{Java 21, Spring Boot, Spring Data JPA, PostgreSQL, Flyway, React, TypeScript, Docker}}{2026}
       \resumeItemListStart
-        \resumeItem{Built a full-stack expense-settlement platform with a \textbf{16-endpoint Spring Boot REST API} and a \textbf{React} + \textbf{TypeScript} front-end, applying layered \textbf{controller--service--repository} architecture with DTO boundaries and centralized error handling.}
-        \resumeItem{Designed an exact-arithmetic split engine on \textbf{BigDecimal} guaranteeing shares sum to the total, and a greedy \textbf{dual max-heap} debt-simplification algorithm reducing any group to \textbf{at most n-1 payments} in \textbf{O(n log n)}.}
-        \resumeItem{Backed the system with \textbf{73 JUnit 5/Mockito tests}, \textbf{Flyway}-versioned schema migrations across \textbf{6 normalized tables}, and \texttt{@EntityGraph} query tuning that collapsed \textbf{22 SELECTs into 1}.}
+        \resumeItem{Built a \textbf{full-stack web application} for splitting group expenses: members log what they paid, and the app works out who owes whom, backed by a \textbf{Java Spring Boot} REST API of \textbf{16 endpoints} and a \textbf{React} and \textbf{TypeScript} interface.}
+        \resumeItem{Solved a rounding problem so every split adds up to the \textbf{exact total} with no lost fractions, and developed a \textbf{settle-up feature} that turns a tangle of debts into the fewest payments possible.}
+        \resumeItem{Designed the \textbf{PostgreSQL} database with version-controlled migrations and wrote \textbf{73 automated tests}; tuned a slow screen that made \textbf{22 database calls} down to \textbf{1}.}
       \resumeItemListEnd
 
     \resumeProjectHeading
       {\textbf{Motion Sensing System} $|$ \textit{TensorFlow/Keras, VGG16, Flask, Streamlit, OpenCV, Python}}{2024}
       \resumeItemListStart
-        \resumeItem{Engineered a \textbf{Human Activity Recognition (HAR)} system classifying real-time human movements using a \textbf{VGG16} model fine-tuned via \textbf{transfer learning}.}
-        \resumeItem{Deployed model inference via a \textbf{Flask} REST API with a \textbf{Streamlit} dashboard for live activity prediction and visualization.}
+        \resumeItem{Built a system that \textbf{recognises human activities from live video}, adapting a pre-trained image-recognition model (\textbf{VGG16}) rather than training one from scratch.}
+        \resumeItem{Delivered it as a live dashboard that displays activity predictions as they happen.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -63,8 +63,8 @@
     \resumeProjectHeading
       {\textbf{Agreement Loops in Multi-Agent Systems} $|$ \textit{Seminar Talk, Literature Review}}{2026}
       \resumeItemListStart
-        \resumeItem{Surveyed foundational and recent papers on \textbf{consensus mechanisms} in \textbf{multi-agent systems} across distributed AI research.}
-        \resumeItem{Presented findings as a \textbf{seminar talk}, synthesizing convergence criteria and open challenges in agent coordination.}
+        \resumeItem{Reviewed current research on \textbf{how independent AI agents reach agreement} with one another across the wider field of distributed AI.}
+        \resumeItem{Presented the findings as a \textbf{seminar talk}, covering what works reliably today and which problems remain unsolved.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
