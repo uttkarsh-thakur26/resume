@@ -1,0 +1,77 @@
+%-------------------------
+% Resume in LaTeX
+% Variant: AI/ML internships
+% ATS-optimised. Compile with pdfLaTeX.
+%
+% Shared styling lives in preamble.tex; shared sections live in sections/.
+% Only SKILLS and PROJECTS differ between this file and resume-sde.tex.
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\input{preamble}
+
+\begin{document}
+
+\input{sections/header}
+
+%-----------SKILLS-----------
+\section{SKILLS}
+\begin{itemize}[leftmargin=0in, label={}, itemsep=-1pt]
+  \small \item
+    \textbf{Languages}: Python, Java, TypeScript, JavaScript, SQL, C++ \\
+    \textbf{AI/ML}: RAG Pipelines, Semantic Search, Vector Databases, FAISS, AST Parsing, NLP, Transformers, LLMs, OpenAI API \\
+    \textbf{ML Libraries}: LangChain, Sentence-Transformers, TensorFlow, PyTorch, Scikit-learn, OpenCV, NumPy, Pandas \\
+    \textbf{Backend \& Web}: FastAPI, Flask, Spring Boot, Spring Data JPA, REST API Design, React.js, Node.js, HTML/CSS \\
+    \textbf{Databases}: PostgreSQL, MySQL, MongoDB, H2, Flyway Migrations \\
+    \textbf{Developer Tools}: Git \& GitHub, Docker, Maven, JUnit 5, Jupyter Notebook, Google Colab, VS Code
+\end{itemize}
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{CodeNav AI} $|$ \textit{FastAPI, React.js, LangChain, FAISS, Sentence-Transformers, OpenAI API, GitPython}}{2026}
+      \resumeItemListStart
+        \resumeItem{Architected a full-stack \textbf{RAG} pipeline using \textbf{LangChain} and \textbf{FAISS vector database}, enabling natural language Q\&A over local codebases via \textbf{semantic search} with \texttt{all-MiniLM-L6-v2} embeddings.}
+        \resumeItem{Engineered \textbf{AST-based parsing} to extract logical code units (functions/classes), preserving semantic boundaries to deliver more relevant retrieval context than naive fixed-size text chunking.}
+        \resumeItem{Optimized vector index loading via \textbf{persistent disk-based caching}, cutting load times from \textbf{$>$20s to $<$100ms} --- a \textbf{99.5\% reduction} in latency.}
+        \resumeItem{Delivered a \textbf{React.js} front-end backed by a \textbf{FastAPI} REST API for natural language codebase navigation.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{BillSync} $|$ \textit{Java 21, Spring Boot, Spring Data JPA, PostgreSQL, Flyway, React, TypeScript, Docker}}{2026}
+      \resumeItemListStart
+        \resumeItem{Built a full-stack expense-settlement platform with a \textbf{16-endpoint Spring Boot REST API} and a \textbf{React} + \textbf{TypeScript} front-end, applying layered \textbf{controller--service--repository} architecture with DTO boundaries and centralized error handling.}
+        \resumeItem{Designed an exact-arithmetic split engine on \textbf{BigDecimal} guaranteeing shares sum to the total, and a greedy \textbf{dual max-heap} debt-simplification algorithm reducing any group to \textbf{at most n-1 payments} in \textbf{O(n log n)}.}
+        \resumeItem{Backed the system with \textbf{73 JUnit 5/Mockito tests}, \textbf{Flyway}-versioned schema migrations across \textbf{6 normalized tables}, and \texttt{@EntityGraph} query tuning that collapsed \textbf{22 SELECTs into 1}.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Motion Sensing System} $|$ \textit{TensorFlow/Keras, VGG16, Flask, Streamlit, OpenCV, Python}}{2024}
+      \resumeItemListStart
+        \resumeItem{Engineered a \textbf{Human Activity Recognition (HAR)} system classifying real-time human movements using a \textbf{VGG16} model fine-tuned via \textbf{transfer learning}.}
+        \resumeItem{Deployed model inference via a \textbf{Flask} REST API with a \textbf{Streamlit} dashboard for live activity prediction and visualization.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH-----------
+\section{RESEARCH \& TALKS}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Agreement Loops in Multi-Agent Systems} $|$ \textit{Seminar Talk, Literature Review}}{2026}
+      \resumeItemListStart
+        \resumeItem{Surveyed foundational and recent papers on \textbf{consensus mechanisms} in \textbf{multi-agent systems} across distributed AI research.}
+        \resumeItem{Presented findings as a \textbf{seminar talk}, synthesizing convergence criteria and open challenges in agent coordination.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\input{sections/education}
+
+\input{sections/certifications}
+
+\input{sections/achievements}
+
+\end{document}

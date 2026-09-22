@@ -1,0 +1,76 @@
+%-------------------------
+% Resume in LaTeX
+% Variant: SOFTWARE ENGINEERING / BACKEND internships
+% ATS-optimised. Compile with pdfLaTeX.
+%
+% Shared styling lives in preamble.tex; shared sections live in sections/.
+% Only SKILLS and PROJECTS differ between this file and resume-aiml.tex.
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\input{preamble}
+
+\begin{document}
+
+\input{sections/header}
+
+%-----------SKILLS-----------
+\section{SKILLS}
+\begin{itemize}[leftmargin=0in, label={}, itemsep=-1pt]
+  \small \item
+    \textbf{Languages}: Java, Python, TypeScript, JavaScript, SQL, C++ \\
+    \textbf{Backend}: Spring Boot, Spring Web MVC, Spring Data JPA, Hibernate, REST API Design, Bean Validation, FastAPI, Flask, Node.js \\
+    \textbf{Databases}: PostgreSQL, MySQL, H2, MongoDB, Flyway Migrations, JPA/Hibernate ORM, Schema Design \\
+    \textbf{Frontend}: React.js, TypeScript, Tailwind CSS, Vite, HTML/CSS \\
+    \textbf{Testing \& Tools}: JUnit 5, Mockito, AssertJ, Docker, Maven, Git \& GitHub, Swagger/OpenAPI, Postman \\
+    \textbf{AI/ML}: RAG Pipelines, Semantic Search, FAISS, LangChain, Transformers, PyTorch, TensorFlow, Scikit-learn
+\end{itemize}
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{BillSync} $|$ \textit{Java 21, Spring Boot, Spring Data JPA, PostgreSQL, Flyway, React, TypeScript, Docker}}{2026}
+      \resumeItemListStart
+        \resumeItem{Architected a full-stack expense-settlement platform exposing \textbf{16 REST endpoints} over a layered \textbf{controller--service--repository} design, with DTO boundaries, \textbf{Bean Validation}, and a single \texttt{@RestControllerAdvice} mapping every failure to a consistent \textbf{400/404/409} JSON contract.}
+        \resumeItem{Engineered an exact-arithmetic split engine on \textbf{BigDecimal} using round-down plus deterministic remainder distribution, guaranteeing shares always sum to the expense total; validated by \textbf{brute-force sweeps} over every amount from 0.01 to 20.00 split 1--12 ways.}
+        \resumeItem{Designed \textbf{SettlementPlanner}, a greedy \textbf{dual max-heap} debt-simplification algorithm running in \textbf{O(n log n)} that bounds any group to \textbf{at most n-1 payments}, benchmarked against the direct debt graph and returning whichever plan is shorter.}
+        \resumeItem{Modeled \textbf{6 normalized tables} with \textbf{Flyway}-versioned migrations and Hibernate in validate-only mode; eliminated \textbf{N+1 queries} via \texttt{@EntityGraph}, collapsing \textbf{22 SELECTs into 1} for a 20-member group.}
+        \resumeItem{Achieved \textbf{73 automated tests} across 9 \textbf{JUnit 5}/\textbf{Mockito}/\textbf{AssertJ} suites covering service logic and \textbf{MockMvc} web slices, running on in-memory \textbf{H2} with zero Docker dependency.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{CodeNav AI} $|$ \textit{FastAPI, React.js, LangChain, FAISS, Sentence-Transformers, OpenAI API, GitPython}}{2026}
+      \resumeItemListStart
+        \resumeItem{Architected a full-stack \textbf{RAG} pipeline using \textbf{LangChain} and a \textbf{FAISS vector database}, enabling natural language Q\&A over local codebases via \textbf{semantic search} with \texttt{all-MiniLM-L6-v2} embeddings.}
+        \resumeItem{Engineered \textbf{AST-based parsing} to extract logical code units (functions/classes), preserving semantic boundaries to deliver more relevant retrieval context than naive fixed-size chunking.}
+        \resumeItem{Optimized vector index loading via \textbf{persistent disk-based caching}, cutting load times from \textbf{$>$20s to $<$100ms} --- a \textbf{99.5\% reduction}; delivered through a \textbf{FastAPI} REST API and a \textbf{React.js} front-end.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Motion Sensing System} $|$ \textit{TensorFlow/Keras, VGG16, Flask, Streamlit, OpenCV, Python}}{2024}
+      \resumeItemListStart
+        \resumeItem{Engineered a \textbf{Human Activity Recognition} system classifying real-time movements with a \textbf{VGG16} model fine-tuned via \textbf{transfer learning}, served through a \textbf{Flask} REST API with a \textbf{Streamlit} dashboard for live prediction.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH-----------
+\section{RESEARCH \& TALKS}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Agreement Loops in Multi-Agent Systems} $|$ \textit{Seminar Talk, Literature Review}}{2026}
+      \resumeItemListStart
+        \resumeItem{Surveyed foundational and recent papers on \textbf{consensus mechanisms} in \textbf{distributed multi-agent systems} and presented the findings as a \textbf{seminar talk}, synthesizing convergence criteria and open challenges in agent coordination.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\input{sections/education}
+
+\input{sections/certifications}
+
+\input{sections/achievements}
+
+\end{document}
