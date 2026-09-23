@@ -57,9 +57,31 @@ sudo apt-get install -y texlive-latex-base texlive-latex-recommended \
 
 ### Overleaf
 
-Upload the whole folder rather than a single file, then set the main document
-to `resume-sde.tex` or `resume-aiml.tex`. The `\input` paths are relative, so
-the structure has to come along.
+`resume-sde.tex` pulls in `preamble.tex` and the files in `sections/`, so
+uploading that one file on its own fails with **`File 'preamble.tex' not
+found`**. Two ways round it.
+
+**Option A, upload the project (keeps the shared structure):**
+
+```bash
+make overleaf          # writes dist/resume-overleaf.zip
+```
+
+In Overleaf: **New Project > Upload Project**, pick that zip. The files sit at
+the zip root, so the relative `\input` paths resolve as-is. Then set the main
+document (**Menu > Main document**) to `resume-sde.tex` or `resume-aiml.tex`.
+
+**Option B, upload a single file (simplest):**
+
+```bash
+make standalone        # writes dist/resume-*-standalone.tex
+```
+
+Each is one self-contained file with every `\input` already inlined. Drag one
+into a blank Overleaf project and compile. Nothing else needed.
+
+These are **generated** files. Edit the modular sources and re-run the command;
+never edit `dist/` by hand. `make` regenerates them as part of a normal build.
 
 ## Editing
 

@@ -6,3 +6,8 @@
 *.fdb_latexmk
 *.synctex.gz
 *.toc
+
+# Build artifacts inside dist/ (the generated .tex and .zip ARE committed)
+dist/*.pdf
+dist/*.aux
+dist/*.out
