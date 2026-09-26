@@ -120,11 +120,12 @@
 \section{SKILLS}
 \begin{itemize}[leftmargin=0in, label={}, itemsep=-1pt]
   \small \item
-    \textbf{Languages}: Java, Python, TypeScript, SQL, C++ \\
-    \textbf{Backend}: Spring Boot, Spring Web MVC, Spring Data JPA, Hibernate, REST API Design, Bean Validation, FastAPI, Flask, Node.js \\
-    \textbf{Databases}: PostgreSQL, MySQL, H2, MongoDB, Flyway Migrations, JPA/Hibernate ORM, Schema Design \\
+    \textbf{Languages}: Java, Python, TypeScript, SQL, Bash, PHP, C++ \\
+    \textbf{Backend}: Spring Boot, Spring Web MVC, Spring Data JPA, Hibernate, REST API Design, Bean Validation, FastAPI, Flask \\
+    \textbf{Cloud \& DevOps}: Microsoft Azure, Cloudflare, Linux (Ubuntu), Nginx, Docker, SSH, TLS/HTTPS, Git \& GitHub \\
+    \textbf{Databases}: PostgreSQL, MySQL, MariaDB, H2, MongoDB, Flyway Migrations, Schema Design \\
     \textbf{Frontend}: React.js, TypeScript, Tailwind CSS, Vite, HTML/CSS \\
-    \textbf{Testing \& Tools}: JUnit 5, Mockito, AssertJ, Docker, Maven, Git \& GitHub, Swagger/OpenAPI, Postman \\
+    \textbf{Testing \& Tools}: JUnit 5, Mockito, AssertJ, Maven, Swagger/OpenAPI, Postman, Google Analytics \\
     \textbf{AI/ML}: RAG Pipelines, Semantic Search, FAISS, LangChain, Transformers, PyTorch, TensorFlow, Scikit-learn
 \end{itemize}
 
@@ -133,13 +134,21 @@
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
+      {\textbf{Knowledge Park Guide} $|$ \textit{Azure, Linux, Nginx, PHP, MariaDB, Cloudflare, Python, Bash}}{Sep 2026 -- Present}
+      \resumeItemListStart
+        \resumeItem{Built and now operate \href{https://knowledgeparkguide.in}{\uline{\textbf{knowledgeparkguide.in}}}, a \textbf{live production website} on a \textbf{Microsoft Azure} cloud server, configuring the full \textbf{Linux}, \textbf{Nginx}, \textbf{PHP} and \textbf{MariaDB} stack by hand and tuning it to run inside 1 GB of memory at \textbf{no compute cost} by sizing it within the free tier.}
+        \resumeItem{Secured the site end to end with \textbf{Cloudflare}, \textbf{HTTPS certificates} that renew themselves automatically, key-only server access, and logging that never records passwords.}
+        \resumeItem{Wrote deployment and publishing tooling in \textbf{Python}, \textbf{Bash} and \textbf{PHP} that releases changes automatically, records every command run on the server as an \textbf{audit trail}, and can be re-run safely without creating duplicates.}
+        \resumeItem{Engineered a custom theme measuring \textbf{99 of 100 on Google PageSpeed} at launch with a perfect \textbf{accessibility} score and zero layout shift, and diagnosed a production outage affecting shared links down to a missing database table.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
       {\textbf{BillSync} $|$ \textit{Java 21, Spring Boot, Spring Data JPA, PostgreSQL, Flyway, React, TypeScript, Docker}}{2026}
       \resumeItemListStart
         \resumeItem{Built a \textbf{full-stack web application} for splitting group expenses: members log what they paid, and the app works out who owes whom, backed by a \textbf{Java Spring Boot} REST API of \textbf{16 endpoints} and a \textbf{React} and \textbf{TypeScript} interface.}
         \resumeItem{Solved a rounding problem that makes shared balances drift over time, so every split adds up to the \textbf{exact total} with no lost fractions; verified automatically across thousands of amount and group-size combinations.}
         \resumeItem{Developed a \textbf{settle-up feature} that turns a tangle of debts into the fewest payments possible, reducing a 5-member group with 8 outstanding debts to just \textbf{4 transfers}.}
-        \resumeItem{Designed the \textbf{PostgreSQL} database of \textbf{6 tables} with version-controlled migrations, and tuned a slow screen that made \textbf{22 database calls} down to \textbf{1}.}
-        \resumeItem{Wrote \textbf{73 automated tests} covering business rules and every API endpoint, so new changes ship without breaking existing behaviour.}
+        \resumeItem{Designed the \textbf{PostgreSQL} database of \textbf{6 tables} with version-controlled migrations and wrote \textbf{73 automated tests} covering business rules and every API endpoint; tuned a slow screen that made \textbf{22 database calls} down to \textbf{1}.}
       \resumeItemListEnd
 
     \resumeProjectHeading
@@ -150,23 +159,9 @@
         \resumeItem{Cut the time to open a codebase from \textbf{over 20 seconds to under 0.1 seconds}, a \textbf{99.5\% improvement}, by saving the search index to disk instead of rebuilding it each time.}
       \resumeItemListEnd
 
-    \resumeProjectHeading
-      {\textbf{Motion Sensing System} $|$ \textit{TensorFlow/Keras, VGG16, Flask, Streamlit, OpenCV, Python}}{2024}
-      \resumeItemListStart
-        \resumeItem{Built a system that \textbf{recognises human activities from live video}, adapting a pre-trained image-recognition model (\textbf{VGG16}) rather than training from scratch, and delivered it as a live dashboard.}
-      \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-%-----------RESEARCH-----------
-\section{RESEARCH \& TALKS}
-  \resumeSubHeadingListStart
-    \resumeProjectHeading
-      {\textbf{Agreement Loops in Multi-Agent Systems} $|$ \textit{Seminar Talk, Literature Review}}{2026}
-      \resumeItemListStart
-        \resumeItem{Reviewed current research on \textbf{how independent AI agents reach agreement} with one another, and presented the findings as a \textbf{seminar talk} covering what works today and what remains unsolved.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
 
 % >>> inlined from sections/education.tex (generated by tools/flatten.py; edit the original)
 %-----------EDUCATION-----------
